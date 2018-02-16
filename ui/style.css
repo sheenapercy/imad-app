@@ -19,7 +19,34 @@ body {
 .img-medium {
     height: 200px;
 }
-p{
-    font-family:'Kavivanar', cursive;
+
+.container{
+    max-width:800px;
+    margin:0 auto;
+    padding:20px;
+    padding-top:60px;
 }
 
+a{
+    text-decoration:none;
+    border:1px solid #000;
+    padding:8px;
+}
+
+a:hover{
+    color:#fff;
+    background-color:#000;
+}
+
+hr{
+    border:2px solid #f00;
+    margin-top:20px;
+}
+
+h3{
+    font-family:'Comic Sans MS';
+}
+
+p{
+    font-family:'Kavivanar',cursive;
+}
