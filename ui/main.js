@@ -1,4 +1,4 @@
-alert("Hello!Thanks for visiting")
+//alert("Hello!Thanks for visiting")
 console.log('Loaded!');
 
 var element = document.getElementById("main-text");
