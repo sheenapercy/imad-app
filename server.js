@@ -40,6 +40,7 @@ function createTemplate(data){
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
+    
     var htmlTemplate= `
     <html>
         <head>
@@ -73,8 +74,6 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
-
-
 //handling specific urls
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -83,7 +82,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function(req,res){
     //res.send('Article one requested and will be served here')
    // res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-   var articleName = req.parons.articleName;
+   var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));
 });
 
