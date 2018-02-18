@@ -83,7 +83,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function(req,res){
     //res.send('Article one requested and will be served here')
    // res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-   var articleName = req.parons.articleName
+   var articleName = req.parons.articleName;
    res.send(createTemplate(articles[articleName]));
 });
 
