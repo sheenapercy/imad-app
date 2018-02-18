@@ -6,5 +6,5 @@ element.innerHTML = "Using client side Javascript now!"
 
 var img = document.getElementById("madi");
 img.onclick = function(){
-    img.style.boxShadow = "30px 30px 30px black" ;
+    img.style.boxShadow = "5px 3px 10px black" ;
 }
