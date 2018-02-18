@@ -2,4 +2,9 @@ alert("Hello!Thanks for visiting")
 console.log('Loaded!');
 
 var element = document.getElementById ("main-text");
-element.innerHTML = "Using clent side Javascript now!"
+element.innerHTML = "Using client side Javascript now!"
+
+var img = document.getElemntById("madi");
+img.onclick = function(){
+    img.style.boxShadow = "3px 3px 3px black" ;
+}
