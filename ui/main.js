@@ -18,7 +18,7 @@ img.onclick = function(){
 
 */
 
-var botton = document.getElementById("counter");
+var button = document.getElementById("counter");
 var counter = 0;
 button.onclick = function(){
     //make request
