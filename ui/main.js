@@ -1,5 +1,5 @@
 //alert("Hello!Thanks for visiting")
-console.log('Loaded!');
+/*console.log('Loaded!');
 
 var element = document.getElementById("main-text");
 element.innerHTML = "Using client side Javascript now!"
@@ -15,3 +15,18 @@ img.onclick = function(){
     img.style.boxShadow = "5px 3px 10px black" ;
 
 }
+
+*/
+
+var botton = document.getElementById("counter");
+var counter = 0;
+button.onclick = function(){
+    //make request
+    
+    //capture response and store it
+    
+    //render var in correct span
+    counter = counter + 1;
+    var span = document.getElementById("count");
+    span.innerHTML = counter.toString();
+};
