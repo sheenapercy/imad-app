@@ -39,3 +39,20 @@ button.onclick = function(){
     request.open('GET','http://sheenamattu04.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+//submit name
+var nameInput = document.getElementById("name");
+var nameNew = nameInputt.value;
+var submit = docmnet.getElementById("submit_btn");
+submit.onclick = function (){
+    
+    //captures list of names and renders it as a list
+    var names = ['name1','name2','name3','name4'];
+    var list = '';
+    for(var i=0; i <names.length; i++){
+        list += '<li>' + names[i] + '</li>';
+    }
+    var ul = document.getElementById("nameList");
+    ul.innerHTML = lsit;
+    
+};
