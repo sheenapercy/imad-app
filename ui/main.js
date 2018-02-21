@@ -38,6 +38,7 @@ button.onclick = function(){
     //make request
     request.open('GET','http://sheenamattu04.imad.hasura-app.io/counter',true);
     request.send(null);
+    
 };
 
 //submit name
@@ -46,13 +47,32 @@ var nameNew = nameInput.value;
 var submit = document.getElementById("submit_btn");
 submit.onclick = function (){
     
-    //captures list of names and renders it as a list
-    var names = ['name1','name2','name3','name4'];
-    var list = '';
-    for(var i=0; i <names.length; i++){
-        list += '<li>' + names[i] + '</li>';
-    }
-    var ul = document.getElementById("nameList");
-    ul.innerHTML = list;
+    //create request
+    var request = new XMLHttpRequest();
+    
+    //capture response and store it
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            //check if request was successfully completed
+            if(request.status === 200){
+                //captures list of names and renders it as a list
+                var names = request.responseText;
+                names = JSON.parse(names);
+                var list = '';
+                for(var i=0; i <names.length; i++){
+                    list += '<li>' + names[i] + '</li>';
+                }
+                var ul = document.getElementById("nameList");
+                ul.innerHTML = list;
+            }
+        }
+    };
+    //make request
+    request.open('GET','http://sheenamattu04.imad.hasura-app.io/submit-name?name=' + name,true);
+    request.send(null);
+    
+    
+    
+    
     
 };
